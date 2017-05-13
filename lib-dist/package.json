@@ -1,13 +1,13 @@
 {
   "name": "ng2-flex-table",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "npm run css && ./node_modules/.bin/ngc -p tsconfig.build.json && rollup -c",
     "build:cli": "ng build --aot",
-    "build:lib": "nglb --rootDir src/ng2-datatable --outDir lib-dist",
+    "build:lib": "nglb --rootDir src/ng2-flex-table --outDir lib-dist",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nzick/ng2-datatable"
+    "url": "https://github.com/nzick/ng2-flex-table"
   },
   "keywords": [
     "angular",
@@ -35,12 +35,12 @@
   ],
   "author": "Nicolas Zick <nicolaszick@gmail.com>",
   "bugs": {
-    "url": "https://github.com/nzick/ng2-datatable/issues"
+    "url": "https://github.com/nzick/ng2-flex-table/issues"
   },
-  "homepage": "https://github.com/nzick/ng2-datatable#readme",
-  "main": "./lib-dist/ng2-datatable.module.js",
-  "module": "./lib-dist/ng2-datatable.module.js",
-  "types": "./lib-dist/ng2-datatable.module.d.ts",
+  "homepage": "https://github.com/nzick/ng2-flex-table#readme",
+  "main": "./lib-dist/ng2-flex-table.module.js",
+  "module": "./lib-dist/ng2-flex-table.module.js",
+  "types": "./lib-dist/ng2-flex-table.module.d.ts",
   "peerDependencies": {
     "@angular/common": ">=2.0.0 <5.0.0 || >=4.0.0-beta <5.0.0",
     "@angular/core": ">=2.0.0 <5.0.0 || >=4.0.0-beta <5.0.0",

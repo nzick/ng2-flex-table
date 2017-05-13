@@ -51,4 +51,4 @@ export var OrderPipe = (function () {
     OrderPipe.ctorParameters = function () { return []; };
     return OrderPipe;
 }());
-//# sourceMappingURL=ng2-datatable.pipes.js.map
+//# sourceMappingURL=ng2-flex-table.pipes.js.map

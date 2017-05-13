@@ -1,7 +1,7 @@
 # ng2-datepicker
 Angular2 Datepicker Component
 
-***ng2-datatable*** is a table grid component for Angular2/4.
+***ng2-flex-table*** is a table grid component for Angular2/4.
 
 ## Demo
 
@@ -9,17 +9,17 @@ Angular2 Datepicker Component
 
 ## Installation:
 
-Install ng2-datatable via `npm`
+Install ng2-flex-table via `npm`
 
 ````shell
-npm install ng2-datatable --save
+npm install ng2-flex-table --save
 ````
 
 ## Integration
 
 ```ts
 // app.module.ts
-import { DataTableModule } from 'ng2-datatable';
+import { DataTableModule } from 'ng2-flex-table';
 
 @NgModule({
   ...
@@ -29,14 +29,14 @@ import { DataTableModule } from 'ng2-datatable';
 export class AppModule { }
 
 // app.component.html
-<ng2-datatable [tabledata]="data" [onValueChanged]="valChanged"></ng2-datatable>
+<ng2-flex-table [tabledata]="data" [onValueChanged]="valChanged"></ng2-flex-table>
 ```
 
 ## Run Included Demo
 
 ```shell
-git clone https://github.com/nzick/ng2-datatable.git --depth 1
-cd ng2-datatable
+git clone https://github.com/nzick/ng2-flex-table.git --depth 1
+cd ng2-flex-table
 npm install
 npm start
 ```
