@@ -5,6 +5,8 @@ Angular2 Datepicker Component
 
 ## Demo
 
+![How it looks](http://i.imgur.com/BfyZHwK.png)
+
 ## Installation:
 
 Install ng2-datatable via `npm`
@@ -27,7 +29,7 @@ import { DataTableModule } from 'ng2-datatable';
 export class AppModule { }
 
 // app.component.html
-<ng2-datatable [options]="options" [(ngModel)]="date"></ng2-datatable>
+<ng2-datatable [tabledata]="data" [onValueChanged]="valChanged"></ng2-datatable>
 ```
 
 ## Run Included Demo

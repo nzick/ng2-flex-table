@@ -1,9 +1,9 @@
 import { Component, Input, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ng2-datatable',
-  templateUrl: 'ng2-datatable.component.html',
-   styleUrls: ['./ng2-datatable.component.sass'],
+  selector: 'ng2-flex-table',
+  templateUrl: 'ng2-flex-table.component.html',
+   styleUrls: ['./ng2-flex-table.component.sass'],
 })
 
 export class TableComponent implements OnInit {

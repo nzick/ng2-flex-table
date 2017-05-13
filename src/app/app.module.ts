@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-import { DataTableModule } from '../ng2-datatable/ng2-datatable.module';
+import { DataTableModule } from '../ng2-flex-table/ng2-flex-table.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
