@@ -16,17 +16,19 @@ This table is made for non relational databases where response object not necess
 
 ````json
 {
-    'startDate': '2015/08/19',
-    'salary': 208.178
-  }, {
-    'lastname': 'Pearl Crosby',
-    'detailposition': 'In PC',
-  }
+  'startDate': '2015/08/19',
+  'salary': 208.178
+}, {
+  'lastname': 'Pearl Crosby',
+  'detailposition': 'In PC'
+}
 ````
 
 Results in the following headers:
-| startDate | salary | lastname | detailposition |
 
+| startDate  | salary  | lastname     | detailposition |
+|------------|---------|--------------|----------------|
+| 2015/08/19 | 208.178 | Pearl Crosby | In PC          |
 
 ***ng2-flex-table*** is built to handle this type of objects and fits the table to your needs.
 All available *keys* will be used as a column and if some object doesnt have it, the cell with be left empty but can be edited by inline editing.
