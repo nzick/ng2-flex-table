@@ -7,7 +7,7 @@ Angular2 Table Component
 
 ![How it looks](http://i.imgur.com/BfyZHwK.png)
 
-Try it out: ![http://ng2-flex-table.nicolaszick.com](http://ng2-flex-table.nicolaszick.com)
+Try it out: [http://ng2-flex-table.nicolaszick.com](http://ng2-flex-table.nicolaszick.com)
 
 ## Installation:
 
