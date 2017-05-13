@@ -3,7 +3,7 @@ import { Component, Input, EventEmitter, OnInit } from '@angular/core';
 @Component({
   selector: 'ng2-flex-table',
   templateUrl: 'ng2-flex-table.component.html',
-   styleUrls: ['./ng2-flex-table.component.sass'],
+  styleUrls: ['./ng2-flex-table.component.sass'],
 })
 
 export class TableComponent implements OnInit {
