@@ -1,0 +1,166 @@
+$table__body-height: 500px;
+$table__header-height: 10rem;
+
+$white: #fff;
+$white-bis: #fafafa;
+$black: #333;
+$grey-light: #b5b5b5;
+
+$border-color: #dbdbdb;
+
+$color__secondary--darker: rgb(17, 67, 87)
+$color__secondary--darker-lighter: rgb(27, 70, 87)
+$color__secondary--darker-much-lighter: rgb(39, 73, 87)
+$color__secondary--lighter: rgb(214, 115, 35)
+
+$transition__default: all .2s ease
+
+$size-7: 12px
+$rounded-corners: 10px
+
+
+.ng2-datatable
+
+    background-color: $white
+    table-layout: fixed
+    border-collapse: collapse
+
+    table
+      border-collapse: collapse
+      border-spacing: 0
+    
+    th, td 
+      text-align: left
+      padding: 0.5em 0.75em;
+      border-bottom-color: rgba(39, 73, 87, 0.05)
+
+    td
+      border: 1px solid $border-color
+      border-width: 0 0 1px
+    tr
+      &:hover 
+        background-color: $white-bis !important
+
+    td
+      border-bottom-color: rgba(39, 73, 87, .05) !important
+
+    td:nth-child(n), th:nth-child(n)  
+        width: 150px
+    td:nth-last-child(1), th:nth-last-child(1)  
+        width: 150px
+
+    th:nth-child(1)
+      border-top-left-radius: $rounded-corners
+
+    th:nth-last-child(1)
+      border-top-right-radius: $rounded-corners
+        
+    &__header
+      height: $table__header-height
+      
+
+      .sorted
+          background-color: $color__secondary--darker-lighter
+
+      th  
+        text-transform: uppercase
+        cursor: pointer
+        background-color: $color__secondary--darker
+        border: none !important
+      
+      tr:nth-child(1)
+        &:hover
+            background-color: $white
+        
+      tr 
+        display: block
+        position: relative
+
+        
+      .block
+        display: none
+
+      &__content
+        display: flex
+        align-items: center
+        color: $white
+        
+        &__headline
+
+        &__input
+          display: block
+
+          &:focus
+            background-color: $color__secondary--lighter !important
+
+        .icon
+          flex-grow: 1
+          justify-content: flex-end
+
+    &__body
+      display: block
+      overflow: auto
+      width: 100%
+      height: $table__body-height
+
+      .sorted
+          background-color: $white-bis
+
+    span.column-resizer 
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 0;
+      width: 8px;
+      height: 100%;
+      padding: 0;
+      cursor: col-resize;
+      border: 1px solid transparent;
+
+    input
+      border: none
+      font-size: $size-7
+      padding: 3px
+      display: block
+      background-color: $white
+      border-radius: 3px
+      color: $white 
+      transition: $transition__default
+      background-color: $color__secondary--darker-much-lighter
+      width: 100%
+      outline: none
+
+      &:disabled
+        border: none
+        background-color: transparent
+        color: $black
+
+
+    input[value]:not([value=""])
+        background-color: $color__secondary--lighter
+
+    .inner-addon  
+        position: relative 
+
+        i
+          visibility: hidden
+          opacity: 0
+          transition: visibility 0s, $transition__default
+
+        &:hover
+          i 
+            visibility: visible
+            opacity: .6
+
+    .inner-addon .icon 
+      position: absolute
+      cursor: pointer
+      top: -1px
+      color: $grey-light
+
+    .left-addon .icon   
+      left:  0px
+    .right-addon .icon  
+      right: 0px
+

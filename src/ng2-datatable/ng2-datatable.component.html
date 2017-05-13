@@ -1,0 +1,33 @@
+<div class="ng2-datatable">
+    <table class="ng2-datatable__component">
+        <thead class="ng2-datatable__header">
+            <tr>
+                <th *ngFor="let head of headerData" [class.sorted]="order === head">
+                    <div class="ng2-datatable__header__content" (click)="reverse = !reverse; order = head"> 
+                        <span class="ng2-datatable__header__content__headline"> {{ head }} </span>
+                        <i class="icon" *ngIf="head === order" [ngClass]="reverse ? 'ion-ios-arrow-up' : 'ion-ios-arrow-down'"></i>
+                    </div>
+                    <div class="inner-addon right-addon">
+                        <i class="icon" (click)="filter[head] = ''">
+                             <svg viewBox="0 0 25 25" version="1.1">
+                                 <g fill="#b5b5b5">
+                                    <path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13z"></path>
+                                    <path d="M21 8l-5 5-5-5-3 3 5 5-5 5 3 3 5-5 5 5 3-3-5-5 5-5z"></path>
+                                 </g>
+                            </svg>
+                        </i>
+                        <input class="ng2-datatable__header__content__input" type="text" [(ngModel)]="filter[head]">
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody class="ng2-datatable__body" >
+            <tr *ngFor="let d of tabledata | filterBy: filter | orderBy: order : reverse " >
+                <td *ngFor="let column of headerData " (dblclick)="editValue($event, d, column)" [class.sorted]="order === column">
+                    <input class="table__input" type="text" value="{{ d[column] || '' }}" disabled>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
