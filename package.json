@@ -1,6 +1,6 @@
 {
   "name": "ng2-flex-table",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "scripts": {
     "ng": "ng",

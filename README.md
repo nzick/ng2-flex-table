@@ -1,11 +1,13 @@
-# ng2-datepicker
-Angular2 Datepicker Component
+# ng2-flex-table
+Angular2 Table Component
 
 ***ng2-flex-table*** is a table grid component for Angular2/4.
 
 ## Demo
 
 ![How it looks](http://i.imgur.com/BfyZHwK.png)
+
+Try it out: ![http://ng2-flex-table.nicolaszick.com](http://ng2-flex-table.nicolaszick.com)
 
 ## Installation:
 
