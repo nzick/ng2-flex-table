@@ -5,7 +5,7 @@ Angular2 Datepicker Component
 
 ## Demo
 
-![How it looks](https://raw.githubusercontent.com/nzick/ng2-datatable/master/github/screenshot.png)
+![How it looks](https://raw.githubusercontent.com/nzick/ng2-datatable/master/github/screenshot.png?raw=true)
 
 ## Installation:
 
