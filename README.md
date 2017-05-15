@@ -34,7 +34,7 @@ Results in the following headers:
 ***ng2-flex-table*** is built to handle this type of objects and fits the table to your needs.
 All available *keys* will be used as a column and if some object doesnt have it, the cell with be left empty but can be edited by inline editing.
 
-`[onValueChanged]` will give you the changed Object if some attribute has changed.
+`(outEvent)` will give you the changed Object if some attribute has changed or tabled got initiated.
 
 
 ## Installation
@@ -59,7 +59,15 @@ import { DataTableModule } from 'ng2-flex-table';
 export class AppModule { }
 
 // app.component.html
-<ng2-flex-table [tabledata]="data" [onValueChanged]="valChanged"></ng2-flex-table>
+<ng2-flex-table [tabledata]="data" (outEvent)="tableEvent($event)"></ng2-flex-table>
+```
+
+Adjust the table height to your needs like this:
+
+```sass
+.ng2-flex-table
+    &__body
+      height: 1000px !important
 ```
 
 ## Run Included Demo

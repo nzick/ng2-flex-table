@@ -31,17 +31,15 @@ $rounded-corners: 10px
     th, td 
       text-align: left
       padding: 0.5em 0.75em;
-      border-bottom-color: rgba(39, 73, 87, 0.05)
+      border-bottom-color: $border-color
 
     td
       border: 1px solid $border-color
       border-width: 0 0 1px
+
     tr
       &:hover 
         background-color: $white-bis
-
-    td
-      border-bottom-color: rgba(39, 73, 87, .05) 
 
     td:nth-child(n), th:nth-child(n)  
         min-width: 150px
@@ -95,7 +93,7 @@ $rounded-corners: 10px
 
     &__body
       display: block
-      overflow: auto
+      overflow-x: auto
       width: 100%
       height: $table__body-height
 
