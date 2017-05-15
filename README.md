@@ -1,5 +1,5 @@
 # ng2-flex-table
-Angular2 Table Component
+Angular2 Table Component with *NO DEPENDENCYS*
 
 ***ng2-flex-table*** is a table grid component for Angular2/4.
 
