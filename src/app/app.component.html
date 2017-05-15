@@ -1,7 +1,7 @@
 <div class="hero is-fullheight">
   <div class="hero-body">
     <div class="container">
-      <ng2-flex-table [tabledata]="data" [onValueChanged]="valChanged"></ng2-flex-table>
+      <ng2-flex-table [tabledata]="data" (outEvent)="tableEvents($event)"></ng2-flex-table>
     </div>
   </div>
 </div>

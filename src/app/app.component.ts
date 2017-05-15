@@ -12,7 +12,7 @@ export class AppComponent {
     this.data = TableData;
   }
 
-  valChanged(value: EventTarget): void {
+  tableEvents(value: Event): void {
     if (value) {
       console.log(value);
     }

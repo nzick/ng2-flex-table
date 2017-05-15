@@ -1,4 +1,7 @@
-import { Component, Input, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+
+type TableEvents = 'init' | 'valueChanged';
+
 
 @Component({
   selector: 'ng2-flex-table',
@@ -8,7 +11,7 @@ import { Component, Input, EventEmitter, OnInit } from '@angular/core';
 
 export class TableComponent implements OnInit {
   @Input() tabledata: Array<any> = [];
-  @Input() onValueChanged: Function;
+  @Output() outEvent: EventEmitter<{ type: TableEvents, data: string | Array<any> }>;
 
   headerData: string[];
   isEditing: EventTarget;
@@ -17,11 +20,14 @@ export class TableComponent implements OnInit {
   editedValue: string;
   filter: Object = {};
 
-  constructor() {}
+  constructor() {
+    this.outEvent = new EventEmitter<{ type: TableEvents, data: string | Array<any> }>();
+  }
 
   ngOnInit(): void {
     this.headerData = this.getUniqueKeys(this.tabledata);
     this.order = this.headerData[0];
+    this.outEvent.emit({ type: 'init', data: 'none' });
   }
 
   getUniqueKeys(obj: any): string[] {
@@ -39,7 +45,7 @@ export class TableComponent implements OnInit {
     if (!this.isEditing || this.isEditing === e.target) {
       if (this.isEditing && this.editedValue !== e.target['value']) {
         obj[property] = this.isEditing['value'];
-        this.onValueChanged(obj);
+        this.outEvent.emit({ type: 'valueChanged', data: obj });
       }
       e.target['disabled'] = !e.target['disabled'];
       this.editedValue = !e.target['disabled'] ? e.target['value'] : undefined;
