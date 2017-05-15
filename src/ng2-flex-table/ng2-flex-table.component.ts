@@ -1,8 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
-type TableEvents = 'init' | 'valueChanged';
-
-
 @Component({
   selector: 'ng2-flex-table',
   templateUrl: 'ng2-flex-table.component.html',
@@ -11,7 +8,7 @@ type TableEvents = 'init' | 'valueChanged';
 
 export class TableComponent implements OnInit {
   @Input() tabledata: Array<any> = [];
-  @Output() outEvent: EventEmitter<{ type: TableEvents, data: string | Array<any> }>;
+  @Output() outEvent: EventEmitter<{ type: string, data: string | Array<any> }>;
 
   headerData: string[];
   isEditing: EventTarget;
@@ -21,7 +18,7 @@ export class TableComponent implements OnInit {
   filter: Object = {};
 
   constructor() {
-    this.outEvent = new EventEmitter<{ type: TableEvents, data: string | Array<any> }>();
+    this.outEvent = new EventEmitter<{ type: string, data: string | Array<any> }>();
   }
 
   ngOnInit(): void {
