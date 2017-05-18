@@ -49,4 +49,8 @@ export class TableComponent implements OnInit {
       this.isEditing = !e.target['disabled'] ? e.target : undefined;
     }
   }
+
+  deleteFilter(item: any): void {
+    delete this.filter[item];
+  }
 }

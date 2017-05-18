@@ -15,10 +15,14 @@ export class FilterPipe implements PipeTransform {
         case 'string': return value => !filter || (value ? ('' + value).toLowerCase().indexOf(filter.toLowerCase()) !== -1 : false);
         case 'object': return value => {
           for (let key in filter) {
-            if (filter.hasOwnProperty(key) &&
-                !value.hasOwnProperty(key) && !Object.getOwnPropertyDescriptor(Object.getPrototypeOf(value), key) ||
-                !this.resolveType(filter[key])(typeof value[key] === 'function' ? value() : value[key])) {
-                  return false;
+            if (filter.hasOwnProperty(key)) {
+              if (!value.hasOwnProperty(key) && filter[key] === null) {
+                return true;
+              };
+              if (!value.hasOwnProperty(key) && !Object.getOwnPropertyDescriptor(Object.getPrototypeOf(value), key) ||
+                  !this.resolveType(filter[key])(typeof value[key] === 'function' ? value() : value[key])) {
+                    return false;
+              }
             }
           }
           return true;
