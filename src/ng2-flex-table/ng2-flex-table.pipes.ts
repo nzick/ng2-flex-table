@@ -41,7 +41,7 @@ export class OrderPipe implements PipeTransform {
   }
 
   private sortObject(v: any[], e: any): any {
-    return v.sort((a: any, b: any): number => a[e] > b[e] ? 1 : -1);
+    return v.sort((a: any, b: any): number => b[e] && a[e] ? a[e] > b[e] ? 1 : -1 : !b[e] && a[e] || !a[e] && !b[e] ? -1 : 1);
   }
 }
 
